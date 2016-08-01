@@ -12,9 +12,7 @@ class ClearOpcache extends AbstractTask
         $this->downloadCachetool($path);
 
         // Get correct PHP version
-        $version = $this->php()->run('version');
-        $version = substr($version, 0, 3);
-        $socket = '/var/run/php/php'.$version.'-fpm.sock';
+        $socket = $this->config->getPluginOption('rocketeer-opcache', 'socket');
 
         // Reset opcache cache
         $binary = $this->binary($path);
