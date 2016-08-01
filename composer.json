@@ -12,6 +12,11 @@
         "anahkiasen/rocketeer": "3.0.x@dev",
         "gordalina/cachetool": "^2.1"
     },
+    "autoload": {
+        "psr-4": {
+            "Rocketeer\\Plugins\\Opcache\\": "src"
+        }
+    },
     "extra": {
         "branch-alias": {
             "dev-master": "1.0-dev"
