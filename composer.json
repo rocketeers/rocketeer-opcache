@@ -12,6 +12,11 @@
         "anahkiasen/rocketeer": "3.0.x@dev",
         "gordalina/cachetool": "^2.1"
     },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
