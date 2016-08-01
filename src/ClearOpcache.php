@@ -17,9 +17,7 @@ class ClearOpcache extends AbstractTask
         // Reset opcache cache
         $binary = $this->binary($path);
         $binary->setParent($this->php());
-        if (!$binary->runSilently('opcache:reset')) {
-            $binary->run('opcache:reset', null, ['--fcgi' => $socket]);
-        }
+        $binary->run('opcache:reset', null, ['--fcgi' => $socket]);
 
         $this->explainer->success('Opcache successfully cleared');
     }
